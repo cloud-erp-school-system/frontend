@@ -3,19 +3,18 @@
 This is Angular 11 front-end application for [Cloud ERP School Management Server](https://github.com/cloud-erp-school-system/backend) 
 
 ## Prerequisites
-You would need following tools to set up local development environment:
-- [Angular CLI 11.0.2](https://cli.angular.io/)
+You will need the following tools to set up your local development environment:
 - [Node.js & NPM LTS](https://www.npmjs.com/get-npm)
+- [Angular CLI 11.0.2](https://cli.angular.io/) (run `npm install -g @angular/cli`)
 
 ## Setting up
 Clone repository, move to directory, open terminal and type `npm install`
 
 ## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To start a development server, run `ng serve` (or  `npm run start` if you don't have Angular CLI installed globally).
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
-
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Using Angular Materials
