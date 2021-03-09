@@ -1,6 +1,14 @@
 # Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+This is Angular 11 front-end application for [Cloud ERP School Management Server](https://github.com/cloud-erp-school-system/backend) 
+
+## Prerequisites
+You would need following tools to set up local development environment:
+- Angular CLI 11.0.2
+- Node.js & NPM LTS
+
+## Setting up
+Clone repository, move to directory, open terminal and type `npm install`
 
 ## Development server
 
