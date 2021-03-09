@@ -4,8 +4,8 @@ This is Angular 11 front-end application for [Cloud ERP School Management Server
 
 ## Prerequisites
 You would need following tools to set up local development environment:
-- Angular CLI 11.0.2
-- Node.js & NPM LTS
+- [Angular CLI 11.0.2](https://cli.angular.io/)
+- [Node.js & NPM LTS](https://www.npmjs.com/get-npm)
 
 ## Setting up
 Clone repository, move to directory, open terminal and type `npm install`
