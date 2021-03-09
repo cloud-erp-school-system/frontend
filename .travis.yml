@@ -1,14 +1,14 @@
 language: node_js
 node_js:
-- '11.0'
+  - '11.0'
 branches:
   only:
-  - master
+    - master
 before_script:
-- npm install -g @angular/cli
+  - npm install -g @angular/cli
 script:
-- npm install
-- npm run build
+  - npm install
+  - npm run build
 addons:
   sonarcloud:
     organization: "cloud-erp-school-system"
