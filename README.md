@@ -2,6 +2,9 @@
 
 This is Angular 11 front-end application for [Cloud ERP School Management Server](https://github.com/cloud-erp-school-system/backend) 
 
+## Status
+[![Build Status](https://travis-ci.org/cloud-erp-school-system/frontend.svg?branch=master)](https://travis-ci.org/cloud-erp-school-system/frontend)
+
 ## Prerequisites
 You will need the following tools to set up your local development environment:
 - [Node.js & NPM LTS](https://www.npmjs.com/get-npm)
