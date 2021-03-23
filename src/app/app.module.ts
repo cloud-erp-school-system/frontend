@@ -12,9 +12,9 @@ function initializeKeycloak(keycloak: KeycloakService) {
     keycloak.init({
       // the config values below need to be set up in the keycloak server
       config: {
-        url: 'http://localhost:8080/auth', 
-        realm: 'POC',
-        clientId: 'dev',
+        url: 'https://63.250.34.54:8443/auth', 
+        realm: 'erp-dev',
+        clientId: 'erp-dev',
       },
       initOptions: {
         onLoad: 'check-sso',
