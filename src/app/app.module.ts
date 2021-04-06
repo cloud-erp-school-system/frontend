@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewRequestsComponent } from './new-requests/new-requests.component';
-import { HomeComponent } from './home/home.component';
 import { UserSettingsComponent } from './user-settings/user-settings.component';
 
 import { NavSidebarComponent } from './nav-sidebar/nav-sidebar.component';
@@ -16,6 +15,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 function initializeKeycloak(keycloak: KeycloakService) {
@@ -37,11 +37,13 @@ function initializeKeycloak(keycloak: KeycloakService) {
   declarations: [
     AppComponent,
     NewRequestsComponent,
-    HomeComponent,
     UserSettingsComponent,
 
-    
-    NavSidebarComponent
+
+    NavSidebarComponent,
+
+
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
