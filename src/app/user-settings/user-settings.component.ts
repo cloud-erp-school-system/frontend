@@ -21,4 +21,7 @@ export class UserSettingsComponent implements OnInit {
       this.userProfile = await this.keycloak.loadUserProfile();
     }
   }
+  public logout() {
+    this.keycloak.logout();
+  }
 }

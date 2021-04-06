@@ -1,25 +1,27 @@
 <h2>User information</h2>
 <ng-container *ngIf="userProfile">
-  <table>
-    <tr *ngIf="userProfile.username">
-      <th scope="row">Username</th>
-      <td>{{ userProfile.username }}</td>
-    </tr>
-    <tr *ngIf="userProfile.firstName">
-      <th scope="row">First name</th>
-      <td>{{ userProfile.firstName }}</td>
-    </tr>
-    <tr *ngIf="userProfile.lastName">
-      <th scope="row">First name</th>
-      <td>{{ userProfile.lastName }}</td>
-    </tr>
-    <tr *ngIf="userProfile.email">
-      <th scope="row">E-mail</th>
-      <td>{{ userProfile.email }}</td>
-    </tr>
-    <tr>
-      <th scope="row">E-mail verified</th>
-      <td>{{ userProfile.emailVerified ? 'Yes' : 'No' }}</td>
-    </tr>
-  </table>
+  <mat-list>
+    <mat-list-item *ngIf="userProfile.username">
+      <span matLine>Username</span>
+      <span matLine>{{ userProfile.username }}</span>
+    </mat-list-item>
+    <mat-list-item *ngIf="userProfile.firstName">
+      <span matLine>First name</span>
+      <span matLine>{{ userProfile.firstName }}</span>
+    </mat-list-item>
+    <mat-list-item *ngIf="userProfile.lastName">
+      <span matLine>First name</span>
+      <span matLine>{{ userProfile.lastName }}</span>
+    </mat-list-item>
+    <mat-list-item *ngIf="userProfile.email">
+      <span matLine>E-mail</span>
+      <span matLine>{{ userProfile.email }}</span>
+    </mat-list-item>
+    <mat-list-item>
+      <span matLine>E-mail verified</span>
+      <span matLine>{{ userProfile.emailVerified ? 'Yes' : 'No' }}</span>
+    </mat-list-item>
+  </mat-list>
+  
+  <button mat-flat-button color="primary" (click)="logout()">Log out</button>
 </ng-container>
