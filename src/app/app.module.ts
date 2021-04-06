@@ -7,6 +7,15 @@ import { MatButtonModule } from "@angular/material/button";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewRequestsComponent } from './new-requests/new-requests.component';
+import { HomeComponent } from './home/home.component';
+import { UserSettingsComponent } from './user-settings/user-settings.component';
+
+import { NavSidebarComponent } from './nav-sidebar/nav-sidebar.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 
 function initializeKeycloak(keycloak: KeycloakService) {
@@ -19,15 +28,20 @@ function initializeKeycloak(keycloak: KeycloakService) {
         clientId: 'erp-dev',
       },
       initOptions: {
-        onLoad: 'check-sso',
-        silentCheckSsoRedirectUri: window.location.origin + '/assets/silent-check-sso.html',
+        onLoad: 'login-required',
       },
     });
 } 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewRequestsComponent,
+    HomeComponent,
+    UserSettingsComponent,
+
+    
+    NavSidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +49,11 @@ function initializeKeycloak(keycloak: KeycloakService) {
     BrowserAnimationsModule,
     KeycloakAngularModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [{
     provide: APP_INITIALIZER,
