@@ -13,7 +13,7 @@ You will need the following tools to set up your local development environment:
 ## Setting up
 Clone repository, move to directory, open terminal and type `npm install`
 
-## Development server
+## Running the application | Development server
 To start a development server, run `ng serve` (or  `npm run start` if you don't have Angular CLI installed globally).
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
