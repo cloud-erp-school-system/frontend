@@ -17,6 +17,9 @@ Clone repository, move to directory, open terminal and type `npm install`
 To start a development server, run `ng serve` (or  `npm run start` if you don't have Angular CLI installed globally).
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+### Note about Keycloak login
+The Keycloak development server does not have a proper https certificate, so browsers might not redirect to it right away and you'll see an empty page instead of a keycloak login page. Manually go to the Keycloak server page and click "Proceed anyway". The application login page will display after that. If you do not have credentials to log in, please go to the Keycloak admin panel and add a user for yourself. You can find the server details in the [documentation repo](https://github.com/cloud-erp-school-system/documentation/blob/master/infra/server-dev01.md)
+
 ## Code scaffolding
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
