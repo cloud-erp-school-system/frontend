@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()"
+    *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span>ERP Admin Portal</span>
+  <a
+    aria-label="User Settings"
+    routerLink="/account"
+    class="account-button"
+    mat-icon-button>
+    <mat-icon aria-label="account icon">account_circle</mat-icon>
+  </a>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Premium version</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/premium/requests" routerLinkActive="list-item-active">Client Requests</a>
+      <a mat-list-item routerLink="/premium/onboard" routerLinkActive="list-item-active">Onboard Clients</a>
+      <a mat-list-item routerLink="/premium/cancellation" routerLinkActive="list-item-active">Cancellations</a>
+      <a mat-list-item routerLink="/premium/expired" routerLinkActive="list-item-active">Expired Clients</a>
+      <a mat-list-item routerLink="/premium/billing" routerLinkActive="list-item-active">Billing</a>
+      <a mat-list-item routerLink="/premium/reactivation" routerLinkActive="list-item-active">Reactivation</a>
+      <a mat-list-item routerLink="/premium/archived" routerLinkActive="list-item-active">Archived</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
